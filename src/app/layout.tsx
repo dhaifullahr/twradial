@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description: "Create stunning radial backgrounds for your UI effortlessly.",
     images: ["/opengraph-image.png"],
   },
+  other: {
+    "google-site-verification": "yfzj9NiqTfDWQ3JNcy4NQB8UXlD7JyjD1Vn_VXmSbxw",
+  },
   icons: {
     icon: "/favicon.ico",
   },
