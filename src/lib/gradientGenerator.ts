@@ -51,11 +51,11 @@ class GradientGenerator {
 
   private createColorInput(colorData: ColorData, index: number): HTMLElement {
     const div = document.createElement('div');
-    div.className = 'color-input bg-slate-700 rounded-xl p-4 border border-white/10';
+    div.className = 'color-input bg-slate-800 rounded-xl p-4 border border-white/10';
     div.innerHTML = `
         <div class="flex items-center justify-between mb-4">
             <h4 class="text-sm font-medium text-white">Color ${index + 1}</h4>
-            <button class="remove-color flex justify-between items-center text-center gap-2 py-1.5 px-4 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg transition-all duration-200 ${this.colors.length <= 1 ? 'opacity-50 pointer-events-none' : ''}" data-index="${index}">
+            <button class="remove-color flex justify-between items-center text-center cursor-pointer gap-2 py-1.5 px-4 bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg transition-all duration-200 ${this.colors.length <= 1 ? 'opacity-50 pointer-events-none' : ''}" data-index="${index}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
                 <p class="text-sm text-red-300">Delete</p>
             </button>
@@ -204,7 +204,7 @@ class GradientGenerator {
     });
 
     if (preview) {
-        preview.style.background = gradients.join(', ').replace(/_/g, ' '); // Replace _ with space for actual CSS
+        preview.style.background = gradients.join(', ').replace(/_/g, ' '); 
     }
 
     const tailwindGradientParts = gradients.map(g => g.replace(/ /g, '_'));
