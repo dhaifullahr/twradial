@@ -15,7 +15,7 @@ const PreviewPanel = () => {
           </div>
         </div>
       </div>
-      <div id="preview" className="w-full h-96 relative overflow-hidden z-[-1]">
+      <div id="preview" className="w-full h-96 relative overflow-hidden">
       </div>
     </section>
   );
